@@ -1,0 +1,76 @@
+model_list:
+  # Standard model names
+  - model_name: claude-opus-4-5-20251101
+    litellm_params:
+      model: openrouter/anthropic/claude-opus-4.5
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: claude-sonnet-4-5-20250929
+    litellm_params:
+      model: openrouter/anthropic/claude-sonnet-4.5
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: claude-haiku-4-5-20251001
+    litellm_params:
+      model: openrouter/anthropic/claude-haiku-4.5
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: claude-opus-4-5
+    litellm_params:
+      model: openrouter/anthropic/claude-opus-4.5
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: claude-sonnet-4-5
+    litellm_params:
+      model: openrouter/anthropic/claude-sonnet-4.5
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: claude-haiku-4-5
+    litellm_params:
+      model: openrouter/anthropic/claude-haiku-4.5
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: gpt-5.1-codex
+    litellm_params:
+      model: openrouter/openai/gpt-5.1-codex
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: gpt-5.1-codex-mini
+    litellm_params:
+      model: openrouter/openai/gpt-5.1-codex-mini
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+
+  # Custom model names
+  - model_name: cld-o45
+    litellm_params:
+      model: openrouter/anthropic/claude-opus-4.5
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+
+  - model_name: cld-s45
+    litellm_params:
+      model: openrouter/anthropic/claude-sonnet-4.5
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: cld-h45
+    litellm_params:
+      model: openrouter/anthropic/claude-haiku-4.5
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: g51-cdx
+    litellm_params:
+      model: openrouter/openai/gpt-5.1-codex
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+  - model_name: g51-cdx-mini
+    litellm_params:
+      model: openrouter/openai/gpt-5.1-codex-mini
+      api_key: os.environ/OPENAI_API_KEY
+      base_url: https://openrouter.ai/api/v1
+
+litellm_settings:
+  success_callback: ["logger.log_request"]
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
