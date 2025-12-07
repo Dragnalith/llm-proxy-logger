@@ -1,7 +1,6 @@
 import json
 from datetime import datetime
 import pathlib
-import os
 
 async def log_request(kwargs, response_obj, start_time, end_time):
     log_file = 'local/llm-proxy-logger.log'
@@ -16,6 +15,8 @@ async def log_request(kwargs, response_obj, start_time, end_time):
                 tool_calls = [t.model_dump() for t in response_obj.choices[0].message.tool_calls]
             log_entry = {
                 'timestamp': datetime.now().isoformat(),
+                'input_model': kwargs.get('litellm_params').get('proxy_server_request', {}).get('body', {}).get('model'),
+                'output_model': kwargs.get('model'),
                 'messages': kwargs.get('input'),
                 'tools': kwargs.get('tools'),
                 'response': {

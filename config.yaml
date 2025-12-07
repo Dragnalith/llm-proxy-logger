@@ -47,7 +47,6 @@ model_list:
       model: openrouter/anthropic/claude-opus-4.5
       api_key: os.environ/OPENAI_API_KEY
       base_url: https://openrouter.ai/api/v1
-
   - model_name: cld-s45
     litellm_params:
       model: openrouter/anthropic/claude-sonnet-4.5
