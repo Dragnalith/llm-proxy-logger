@@ -4,7 +4,7 @@ import pathlib
 import os
 
 async def log_request(kwargs, response_obj, start_time, end_time):
-    log_file = os.environ.get("LLM_PROXY_LOGGER_LOG_FILE")
+    log_file = 'local/llm-proxy-logger.log'
     if not log_file:
         return
     log_path = pathlib.Path(log_file)
