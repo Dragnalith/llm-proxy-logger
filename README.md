@@ -1,4 +1,13 @@
-# Railway Deployment
+# LLM Request Logging Proxy
+
+# Overview
+
+This repository contains a lightweight LiteLLM-based proxy designed to sit between AI agent tools and the model provider.  
+The purpose is to capture and inspect the exact API requests these tools send — including the structure, injected system rules, and hidden context.
+
+It accompanies the blog post: [following blog post](https://marcdelorme.fr/observing-llm-request-from-claude-code-and-cursor-using-litellm-as-a-proxy)
+
+# Deploy with Railway
 
 Create a railway account on https://railway.com.
 
